@@ -1,0 +1,54 @@
+// Page top
+@use '../../global' as *;
+
+.p-pagetop {
+  position: fixed;
+  bottom: 40px;
+  right: 10px;
+  width: 35px;
+  height: 35px;
+  opacity: 0;
+  visibility: hidden;
+  @include transition();
+  z-index: 10;
+
+  @include mq-min(tab) {
+    bottom: 40px;
+    right: 40px;
+    width: 52px;
+    height: 52px;
+  }
+
+  &.is-active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__link {
+    display: flex;
+    position: relative;
+    top: 0;
+    line-height: 1;
+    width: 35px;
+    height: 35px;
+    //box-shadow: 0px 0px 8px 0px rgb(var(--black-rgb) / 0.6);
+    @include transition();
+
+    @include mq-min(md) {
+      width: 52px;
+      height: 52px;
+    }
+
+    &:hover {
+      @include any-hover {
+        opacity: var(--opacity);
+        top: -8px;
+      }
+    }
+
+    img {
+      //filter: drop-shadow(0px 0px 8px rgb(var(--black-rgb) / 0.6));
+      filter: drop-shadow(0px 0px 2px rgb(var(--neutral-rgb) / 1));
+    }
+  }
+}

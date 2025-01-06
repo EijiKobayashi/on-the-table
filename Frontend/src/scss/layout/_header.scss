@@ -1,26 +1,206 @@
 // Header
 @use '../global' as *;
 
-.header {
-  padding: 0;
-  color: #fff;
-  margin: 0;
-  background-color: var(--blue);
-
-  @include mq-min(md) {
-    color: #000;
-    background-color: var(--orange);
-  }
+.l-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgb(var(--primary-rgb) / 1);
+  @include transition();
+  z-index: 111;
 
   @include mq-min(tab) {
-    background-color: var(--gray);
+    position: fixed;
+    top: 0;
+    left: 0;
   }
 
-  @include mq-min(xl) {
-    background-color: var(--purple);
+  &.is-fixed {
+    position: fixed;
+    transform: translate3d(0, -150%, 0);
+
+    @include mq-min(tab) {
+      .l-header__inner {
+      }
+    }
   }
 
-  @include mq-min('pc-lg') {
-    background-color: var(--green);
+  &.is-hide {
+    position: fixed;
+    transform: translate3d(0, -150%, 0);
+
+    @include mq-min(tab) {
+    }
+  }
+
+  &.is-show {
+    position: fixed;
+    transform: translate3d(0, 0, 0);
+
+    @include mq-min(tab) {
+    }
+  }
+
+  .is-open-sp-menu & {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  body:has(.l-sideform) &,
+  body:has(.l-content--complete) & {
+    position: absolute;
+  }
+
+  a {
+    @include transition();
+
+    &:hover {
+      @include any-hover {
+        //opacity: 0.6;
+      }
+    }
+  }
+
+  .l-header__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    position: relative;
+    height: var(--header-height-sp);
+    padding: 0;
+    @include transition();
+
+    @include mq-min(md) {
+    }
+
+    @include mq-min(tab) {
+      //display: grid;
+      //grid-template-columns: auto 1fr auto auto;
+      //align-items: center;
+      //grid-column-gap: 0;
+      height: var(--header-height-pc);
+      //background-color: rgb(var(--gray-exlight-rgb) / 1);
+      padding: 0 0 0 0;
+
+      body.home & {
+        //background-color: rgb(var(--white-rgb) / 1);
+      }
+
+      //フォーム系ページ
+      body:has(.l-sideform) &,
+      body:has(.l-content--complete) & {
+        //background-color: rgb(var(--white-rgb) / 1);
+      }
+    }
+
+    @include mq-min(xl) {
+      //grid-template-columns: 1fr 1fr auto auto;
+    }
+
+    .is-open-sp-menu & {
+      z-index: 110;
+    }
+  }
+
+  h1.l-header__logo,
+  p.l-header__logo {
+    grid-column: 1;
+    justify-self: start;
+    max-width: 250px;
+    height: var(--header-logo-height-sp);
+    vertical-align: top;
+    margin-right: 0;
+    @include transition();
+    z-index: 110;
+
+    @include mq-min(md) {
+      height: var(--header-logo-height-md);
+    }
+
+    @include mq-min(tab) {
+      max-width: 100%;
+      height: auto;
+      max-height: var(--header-logo-height-md);
+      //margin-right: 12px;
+    }
+
+    @include mq-min(xl) {
+      width: 250px;
+      max-height: var(--header-logo-height-pc);
+      //max-height: auto;
+      //margin-right: 32px;
+    }
+
+    @include mq-min(pc-md) {
+      //margin-right: 64px;
+    }
+
+    a {
+      display: flex;
+      align-content: center;
+      width: 100%;
+      height: auto;
+
+      &:hover {
+        @include any-hover {
+          opacity: 0.6;
+        }
+      }
+
+      img {
+        align-self: center;
+        //display: inline-block;
+        width: auto;
+        height: var(--header-logo-height-sp);
+
+        @include mq-min(md) {
+          height: var(--header-logo-height-md);
+        }
+
+        @include mq-min(tab) {
+          max-width: 100%;
+          height: auto;
+          max-height: var(--header-logo-height-md);
+        }
+
+        @include mq-min(xl) {
+          //height: auto;
+          max-height: var(--header-logo-height-pc);
+        }
+      }
+    }
+  }
+
+  .l-header__nav {
+    display: none;
+
+    @include mq-min(tab) {
+      display: block;
+      grid-column: 2;
+      justify-self: start;
+      margin-right: 32px;
+      margin-right: 12px;
+    }
+
+    @include mq-min(xl) {
+    }
+  }
+
+  .l-header__menu {
+    grid-column: 3;
+    justify-self: end;
+    position: relative;
+    width: 56px;
+    height: 56px;
+    z-index: 110;
+
+    @include mq-min(tab) {
+      //display: none;
+    }
   }
 }

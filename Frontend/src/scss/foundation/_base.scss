@@ -9,12 +9,45 @@ html {
 }
 
 body {
-  font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN',
-    'Hiragino Sans', Meiryo, sans-serif;
+  color: var(--white);
+  font-family: var(--font-serif);
+  letter-spacing: var(--letter-spacing);
+
+  @include mq-min(md) {
+  }
+
+  @include mq-min(xl) {
+  }
 
   ::selection,
   ::-moz-selection {
-    color: #000;
-    background: #fff;
+    color: var(--black);
+    background: var(--white);
+  }
+
+  &.is-open-sp-menu {
+    _zoom: 1;
+    overflow: hidden;
+
+    @supports (-webkit-touch-callout: none) {
+      html {
+        height: -webkit-fill-available;
+      }
+
+      body {
+        min-height: 100vh;
+        height: -webkit-fill-available;
+      }
+    }
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+a[href^='tel:'] {
+  @include mq-min(md) {
+    pointer-events: none;
   }
 }
