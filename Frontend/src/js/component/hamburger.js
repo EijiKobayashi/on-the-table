@@ -30,15 +30,9 @@ import debounce from './debounce';
     if (currentWidth == window.screen.width) {
       return;
     }
-    if (document.body.classList.contains('is-open-sp-menu')) {
+    if (document.body.classList.contains('is-open-menu')) {
       close($menu, scrollPosition);
       state = false;
-    }
-    if (headerCTAButton.classList.contains('is-open')) {
-      headerCTAButton.classList.remove('is-open');
-    }
-    if (headerCTAElement.classList.contains('is-open')) {
-      headerCTAElement.classList.remove('is-open');
     }
   });
   window.addEventListener('resize', handleResize);
@@ -56,14 +50,14 @@ import debounce from './debounce';
     true
   );
 
-  const $spnav = document.querySelector('.p-navigation-sp');
-  if ($spnav) {
-    document.addEventListener('DOMContentLoaded', () => {
-      $spnav.style.display = 'block';
-    });
-    $spnav.addEventListener('click', (e) => {
-      if (document.body.classList.contains('is-open-sp-menu')) {
-        if (!e.target.closest('.p-navigation-sp__inner')) {
+  const $nav = document.querySelector('.p-navigation');
+  if ($nav) {
+    /*document.addEventListener('DOMContentLoaded', () => {
+      $nav.style.display = 'block';
+    });*/
+    $nav.addEventListener('click', (e) => {
+      if (document.body.classList.contains('is-open-menu')) {
+        if (!e.target.closest('.p-navigation__inner')) {
           // console.log('外側');
           close($menu, scrollPosition);
           state = false;
@@ -72,43 +66,45 @@ import debounce from './debounce';
         }
       }
     });
+
+    const $links = $nav.querySelectorAll('.--navigation-item a');
+    $links.forEach(($link) => {
+      $link.addEventListener('click', (e) => {
+        if (document.body.classList.contains('is-open-menu')) {
+          close($menu, scrollPosition);
+          state = false;
+        }
+
+        // ハッシュリンク処理
+        const hash = $link.getAttribute('href');
+        if (hash.startsWith('#')) {
+          const targetElement = document.querySelector(hash);
+          if (targetElement) {
+            e.preventDefault(); // デフォルトのジャンプを無効化
+            targetElement.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start' // スクロール位置を先頭に設定
+            });
+          }
+        }
+      });
+    });
   }
 
   const open = (element, position) => {
     element.classList.add('is-active');
-    document.body.classList.add('is-open-sp-menu');
-    document.body.classList.remove('is-close-sp-menu');
+    document.body.classList.add('is-open-menu');
+    document.body.classList.remove('is-close-menu');
     //document.body.style.top = `${-position}px`;
     document.body.style = `--top-position: ${-position}px`;
   };
 
   const close = (element, position) => {
     element.classList.remove('is-active');
-    document.body.classList.remove('is-open-sp-menu');
-    document.body.classList.add('is-close-sp-menu');
+    document.body.classList.remove('is-open-menu');
+    document.body.classList.add('is-close-menu');
     window.scrollTo(0, position);
     //document.body.style.top = 0;
     document.body.style = `--top-position: 0`;
   };
-
-  // Header CTA (Toggle)
-  const headerCTAButton = document.querySelector('.js-header-cta-button');
-  const headerCTAElement = document.querySelector('.js-header-cta-element');
-  if (headerCTAButton && headerCTAElement) {
-    headerCTAButton.addEventListener('click', (e) => {
-      e.preventDefault();
-      headerCTAButton.classList.toggle('is-open');
-      headerCTAElement.classList.toggle('is-open');
-    });
-  }
-
-  // SP Submenu (Toggle)
-  const navigationChildren = document.querySelectorAll('.p-navigation-sp__nav .--navigation-item:has(.--navigation-children) > a');
-  if (!navigationChildren.length) return;
-  navigationChildren.forEach((item) => {
-    item.addEventListener('click', (e) => {
-      e.preventDefault();
-      item.parentNode.classList.toggle('is-open');
-    });
-  });
 })();

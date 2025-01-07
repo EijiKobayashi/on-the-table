@@ -8,6 +8,7 @@
   --black: #000;
   --white: #fff;
   --gray: #f4f4f4;
+  --dark-gray: #282828;
 
   /* Style Guide */
   --primary-color: var(--eiger-nordwand);
@@ -41,11 +42,13 @@
   /* Height */
   --header-height-sp: 100px;
   --header-height-pc: 200px;
+  --header-logo-height-sp: 58px;
+  --header-logo-height-md: 80px;
 
   /* Line Height */
-  --line-height: 2.2;
+  --line-height: 2.8;
   --line-height-heading: 1;
-  --line-height-list: 2.2;
+  --line-height-list: 1.8;
   --line-height-high: 4.2;
 
   /* Letter Spacing */

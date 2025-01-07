@@ -13,19 +13,13 @@ body {
   font-family: var(--font-serif);
   letter-spacing: var(--letter-spacing);
 
-  @include mq-min(md) {
-  }
-
-  @include mq-min(xl) {
-  }
-
   ::selection,
   ::-moz-selection {
     color: var(--black);
     background: var(--white);
   }
 
-  &.is-open-sp-menu {
+  &.is-open-menu {
     _zoom: 1;
     overflow: hidden;
 
@@ -38,6 +32,13 @@ body {
         min-height: 100vh;
         height: -webkit-fill-available;
       }
+    }
+  }
+
+  @include mq-min(tab) {
+    &.is-open-menu {
+      _zoom: unset;
+      overflow: visible;
     }
   }
 }

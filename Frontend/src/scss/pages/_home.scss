@@ -1,0 +1,463 @@
+// HOME
+@use '../global' as *;
+
+.p-home {
+}
+
+// Introduction
+.p-home-introduction {
+}
+
+// News
+.p-home-news {
+}
+
+// Menu
+.p-home-menu {
+}
+
+// Chef
+.p-home-chef {
+  background-color: var(--secondary-color);
+
+  h2.c-heading {
+    --heading-underline-color: var(--neutral-color);
+    color: var(--neutral-color);
+  }
+
+  .p-home-chef__name {
+    padding: 160px 0;
+
+    @include mq-min(tab) {
+      padding: 240px 0;
+    }
+
+    .ja-JP {
+      display: block;
+      color: var(--black);
+      @include font-size(16);
+
+      @include mq-min(tab) {
+        @include font-size(28);
+      }
+    }
+
+    .en-US {
+      display: block;
+      color: var(--neutral-color);
+      @include font-size(12);
+      margin: 8px 0 0;
+
+      @include mq-min(tab) {
+        @include font-size(16);
+        letter-spacing: 0.3rem;
+        margin: 16px 0 0;
+      }
+    }
+  }
+
+  .p-home-chef__text {
+    color: var(--dark-gray);
+    @include font-size(14);
+    line-height: var(--line-height-list);
+    //margin-top: 60px;
+
+    @include mq-min(tab) {
+      @include font-size(20);
+      line-height: var(--line-height);
+      //margin-top: 120px;
+    }
+  }
+
+  &__gallery {
+    position: relative;
+    margin: 32px 0 0;
+
+    @include mq-min(md) {
+      margin: 40px 0 0;
+    }
+
+    ul {
+      @include mq-min(md) {
+      }
+
+      li {
+        position: relative;
+
+        &:nth-of-type(1) {
+          position: absolute;
+
+          @include mq-max(md) {
+            display: none;
+            top: -1020px;
+            right: 0;
+            max-width: 200px;
+          }
+
+          @include mq-min(md) {
+            top: -800px;
+            right: 0;
+            max-width: 320px;
+          }
+
+          @include mq-min(tab) {
+            top: -1380px;
+          }
+
+          img {
+            @include mq-min(md) {
+            }
+          }
+        }
+
+        &:nth-of-type(2) {
+        }
+      }
+    }
+  }
+}
+
+// Our Statement
+.p-home-our-statement {
+  background-color: var(--secondary-color);
+
+  h2.c-heading {
+    --heading-underline-color: var(--neutral-color);
+    color: var(--neutral-color);
+  }
+
+  .p-home-our-statement__text {
+    color: var(--dark-gray);
+    @include font-size(14);
+    text-align: center;
+    line-height: var(--line-height-high);
+    margin-top: 60px;
+
+    @include mq-min(tab) {
+      @include font-size(20);
+      margin-top: 120px;
+    }
+  }
+
+  &__gallery {
+    background-image: url(/assets/images/common/illust_bg_sp.svg);
+    background-position: center top;
+    background-repeat: repeat-y;
+    background-size: 320px auto;
+    margin: 30px 0 0;
+
+    @include mq-min(md) {
+      background-image: none;
+      margin: 0;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      margin: 0;
+
+      @include mq-min(md) {
+        flex-direction: row;
+        gap: 48px;
+      }
+
+      li {
+        display: block;
+        position: relative;
+
+        &:nth-of-type(1) {
+          @include mq-max(md) {
+            max-width: 200px;
+          }
+
+          @include mq-min(md) {
+            top: -64px;
+          }
+
+          img {
+            @include mq-min(md) {
+            }
+          }
+        }
+
+        &:nth-of-type(2) {
+          @include mq-max(md) {
+            max-width: 280px;
+          }
+
+          @include mq-min(md) {
+            top: 64px;
+            order: -1;
+          }
+
+          img {
+            @include mq-min(md) {
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Restaurant
+.p-home-restaurant {
+  background-color: var(--secondary-color);
+
+  h2.c-heading {
+    --heading-underline-color: var(--neutral-color);
+    color: var(--neutral-color);
+  }
+
+  .p-home-restaurant__table {
+    line-height: var(--line-height-list);
+    border-top: 1px solid var(--white);
+    margin-top: 64px;
+
+    @include mq-min(tab) {
+      margin-top: 80px;
+    }
+
+    tr {
+      @include mq-min(tab) {
+      }
+
+      th,
+      td {
+        @include mq-max(md) {
+          @include font-size(14);
+        }
+
+        @include mq-min(md) {
+          @include font-size(16);
+          border-bottom: 1px solid var(--white);
+          vertical-align: middle;
+        }
+      }
+
+      th {
+        color: var(--neutral-color);
+
+        @include mq-max(md) {
+          display: block;
+          padding: 32px 0 16px;
+        }
+
+        @include mq-min(md) {
+          width: 126px;
+          padding: 40px 0;
+        }
+      }
+
+      td {
+        color: var(--dark-gray);
+
+        @include mq-max(md) {
+          display: block;
+          border-bottom: 1px solid var(--white);
+          padding: 0 0 32px;
+        }
+
+        @include mq-min(md) {
+          padding: 40px 0;
+        }
+      }
+    }
+  }
+
+  .p-home-restaurant__map {
+    margin-top: 56px;
+
+    @include mq-min(tab) {
+      margin-top: 80px;
+    }
+  }
+
+  &__gallery {
+    position: relative;
+    background-color: var(--secondary-color);
+    margin: 0 10%;
+
+    @include mq-min(tab) {
+      margin: 0 10%;
+    }
+
+    ul {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+
+      @include mq-min(tab) {
+        gap: 16px;
+      }
+
+      li {
+        display: block;
+
+        img {
+          display: block;
+          width: 100%;
+          height: auto;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
+
+// Inquiry
+.p-home-inquiry {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--dark-gray);
+
+  @include mq-min(tab) {
+  }
+
+  h2 + p {
+    line-height: var(--line-height);
+    margin-top: 64px;
+
+    @include mq-min(tab) {
+      margin-top: 80px;
+    }
+  }
+
+  .p-home-inquiry__list {
+    place-items: center;
+    justify-items: center;
+    align-items: center;
+    border-top: 1px solid var(--white);
+    padding: 30px 0;
+
+    @include mq-min(tab) {
+      padding: 40px 0;
+    }
+
+    &:has(dt) {
+      display: grid;
+      grid-template-columns: 50px 1fr;
+      column-gap: 8px;
+
+      @include mq-min(tab) {
+        grid-template-columns: 100px 1fr;
+        column-gap: 16px;
+      }
+    }
+
+    &:nth-of-type(1) {
+      margin-top: 40px;
+
+      @include mq-min(tab) {
+        margin-top: 56px;
+      }
+
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        width: 180px;
+        height: 180px;
+        background-color: var(--black);
+        border: 1px solid var(--white);
+        margin: 0 auto;
+        padding: 0;
+        @include transition();
+
+        &:hover {
+          opacity: var(--opacity);
+        }
+
+        img {
+          max-width: 100px;
+        }
+      }
+    }
+
+    &:nth-of-type(2) {
+      dt {
+        @include mq-max(tab) {
+          text-indent: -9999px;
+          text-decoration: none;
+          width: 25px;
+          height: 25px;
+          background-image: url(/assets/images/common/icon_telephone.svg);
+          background-position: 0;
+          background-repeat: no-repeat;
+          background-size: 100% auto;
+          overflow: hidden;
+        }
+
+        @include mq-min(tab) {
+          @include font-size(16);
+        }
+      }
+
+      dd {
+        @include font-size(20);
+        letter-spacing: 0.2em;
+
+        @include mq-min(tab) {
+          @include font-size(40);
+        }
+      }
+    }
+
+    &:nth-of-type(3) {
+      dt {
+        @include mq-max(tab) {
+          text-indent: -9999px;
+          text-decoration: none;
+          width: 25px;
+          height: 25px;
+          background-image: url(/assets/images/common/icon_mail.svg);
+          background-position: 0;
+          background-repeat: no-repeat;
+          background-size: 100% auto;
+          overflow: hidden;
+        }
+
+        @include mq-min(tab) {
+          @include font-size(16);
+        }
+      }
+
+      dd {
+        @include font-size(14);
+
+        @include mq-min(tab) {
+          @include font-size(20);
+        }
+      }
+    }
+
+    &:nth-of-type(4) {
+      @include font-size(14);
+
+      @include mq-min(tab) {
+        @include font-size(24);
+      }
+
+      .icon-instagram {
+        display: inline-block;
+        position: relative;
+        top: 2px;
+        line-height: 1;
+        width: 16px;
+        height: 16px;
+        background-image: url(/assets/images/common/icon_instagram.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+
+        @include mq-min(tab) {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+  }
+}

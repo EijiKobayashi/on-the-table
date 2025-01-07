@@ -1,5 +1,26 @@
 // Main
 @use '../global' as *;
 
-.main {
+.l-main {
+  //background-attachment: fixed;
+  background-image: url(/assets/images/common/illust_bg_pc.svg);
+  background-position: center top;
+  background-repeat: repeat-y;
+  background-size: 2013px auto;
+  padding-top: var(--header-height-sp);
+
+  @include mq-min(tab) {
+    padding-top: var(--header-height-pc);
+  }
+
+  .l-main__inner {
+    max-width: var(--max-width);
+    background-color: var(--primary-color);
+    margin: 0 auto;
+    padding-bottom: var(--header-height-sp);
+
+    @include mq-min(tab) {
+      padding-bottom: var(--header-height-pc);
+    }
+  }
 }

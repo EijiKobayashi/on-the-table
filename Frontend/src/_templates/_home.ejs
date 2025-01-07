@@ -1,4 +1,12 @@
-<main class="main">
-  <h1 class="">HOME</h1>
-  <p>ホームページです。</p>
+<main class="l-main">
+  <div class="l-main__inner">
+    <%- include('./_templates/_home/_introduction.ejs', { domain, path, dir, meta: meta }); %>
+    <%- include('./_templates/_home/_news.ejs', { domain, path, dir, meta: meta }); %>
+    <%- include('./_templates/_home/_menu.ejs', { domain, path, dir, meta: meta }); %>
+    <%- include('./_templates/_home/_chef.ejs', { domain, path, dir, meta: meta }); %>
+    <%- include('./_templates/_home/_our-statement.ejs', { domain, path, dir, meta: meta }); %>
+    <%- include('./_templates/_home/_restaurant.ejs', { domain, path, dir, meta: meta }); %>
+    <%- include('./_templates/_home/_inquiry.ejs'); %>
+    <!--  / .l-main__inner /  -->
+  </div>
 </main>

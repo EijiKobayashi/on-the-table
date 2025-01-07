@@ -2,7 +2,6 @@
 @use '../../global' as *;
 
 .c-hamburger {
-  //background-color: rgb(var(--fainting-light-rgb) / 1);
   @include transition();
 
   &__button {
@@ -22,32 +21,49 @@
   &__border {
     position: absolute;
     left: 50%;
-    width: 32px;
+    width: 30px;
     height: 1px;
     background-color: var(--white);
     margin: 0 auto;
     @include transition(all, 0.35s, ease);
     transform: translateX(-50%);
 
+    @include mq-min(tab) {
+      width: 38px;
+    }
+
     &:nth-of-type(1) {
-      top: 16px;
+      top: 12px;
+
+      @include mq-min(tab) {
+        top: 14px;
+      }
     }
 
     &:nth-of-type(2) {
       top: 50%;
       transform: translate(-50%, -50%);
+
+      @include mq-min(tab) {
+      }
     }
 
     &:nth-of-type(3) {
-      bottom: 16px;
+      bottom: 12px;
+
+      @include mq-min(tab) {
+        bottom: 14px;
+      }
     }
   }
 
   &.is-active {
-    //background-color: var(--white);
-
     .c-hamburger__border {
-      background-color: var(--white);
+      background-color: var(--neutral-color);
+
+      @include mq-min(tab) {
+        background-color: var(--white);
+      }
 
       &:nth-of-type(1) {
         top: 50%;
@@ -63,11 +79,5 @@
         opacity: 0;
       }
     }
-  }
-
-  &__text {
-    display: inline-block;
-    text-indent: -9999px;
-    text-decoration: none;
   }
 }

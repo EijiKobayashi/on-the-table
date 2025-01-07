@@ -34,7 +34,7 @@
     //box-shadow: 0px 0px 8px 0px rgb(var(--black-rgb) / 0.6);
     @include transition();
 
-    @include mq-min(md) {
+    @include mq-min(tab) {
       width: 52px;
       height: 52px;
     }
