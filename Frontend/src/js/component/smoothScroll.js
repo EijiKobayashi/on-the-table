@@ -42,7 +42,7 @@ const smoothScroll = () => {
       }
 
       // 移動先取得
-      const scrollStopTop = scrollStopTarget.getBoundingClientRect().top - 20;
+      const scrollStopTop = scrollStopTarget.getBoundingClientRect().top - 80;
 
       // 現在のスクロール量
       const scrollTop = window.pageYOffset;

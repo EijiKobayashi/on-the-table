@@ -4,16 +4,13 @@
 .l-footer {
   background-color: var(--primary-color);
 
-  @include mq-min(md) {
-  }
-
   @include mq-min(tab) {
   }
 
-  @include mq-min(xl) {
-  }
-
-  @include mq-min('pc-lg') {
+  @include mq-min(tab) {
+    .is-open-menu & {
+      filter: blur(2px);
+    }
   }
 
   .l-footer__inner {

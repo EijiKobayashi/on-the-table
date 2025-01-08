@@ -1,9 +1,6 @@
 /**
  * HEADING
  */
-/**
- * HEADING
- */
 (() => {
   const updateHeadingUnderlineWidth = () => {
     const sections = document.querySelectorAll('.c-section');

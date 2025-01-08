@@ -3,6 +3,7 @@
  */
 
 import './component/adjustViewport';
+import './component/chef';
 import './component/hamburger';
 import './component/header';
 import './component/heading';

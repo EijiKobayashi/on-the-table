@@ -29,6 +29,10 @@
   --success-rgb: 96 172 114;
   --warning-rgb: 255 214 89;
   --error-rgb: 239 82 98;
+  --black-rgb: 0 0 0;
+  --white-rgb: 255 255 255;
+  --gray-rgb: 244 244 244;
+  --dark-gray-rgb: 40 40 40;
 
   /* font-family */
   --font-sans-serif: 'Noto Sans JP', serif;
@@ -49,6 +53,7 @@
   --line-height: 2.8;
   --line-height-heading: 1;
   --line-height-list: 1.8;
+  --line-height-low: 1.4;
   --line-height-high: 4.2;
 
   /* Letter Spacing */

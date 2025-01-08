@@ -48,10 +48,12 @@
 
     .is-open-menu & {
       background-color: transparent;
+      //background-color: rgb(var(--black-rgb) / 0.35);
       visibility: visible;
       opacity: 1;
       z-index: 100;
-      //backdrop-filter: blur(4px);
+      //backdrop-filter: blur(0.1em);
+      //backdrop-filter: grayscale(100%);
     }
   }
 
@@ -85,6 +87,14 @@
         height: auto;
         z-index: +1;
       }
+    }
+  }
+
+  .p-navigation__nav {
+    margin: 32px 0 0;
+
+    @include mq-min(tab) {
+      margin: 0;
     }
 
     .--navigation {

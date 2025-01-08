@@ -37,8 +37,9 @@ body {
 
   @include mq-min(tab) {
     &.is-open-menu {
-      _zoom: unset;
-      overflow: visible;
+      //_zoom: unset;
+      //overflow: visible;
+      //filter: blur(2px);
     }
   }
 }
