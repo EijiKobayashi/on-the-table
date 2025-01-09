@@ -4,7 +4,7 @@
 (() => {
   const updateProfileMarginWidth = () => {
     const chef = document.querySelector('#chef');
-    const profile = chef.querySelector('.p-home-chef__profile');
+    const profile = chef?.querySelector('.p-home-chef__profile') || null;
 
     if (profile) {
       //const profileWidth = profile.getBoundingClientRect().width;
