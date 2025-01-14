@@ -1,0 +1,10 @@
+/*
+* ADMIN STYLE
+*/
+
+:root {
+}
+
+:root :where(.editor-styles-wrapper)::after {
+  height: 0 !important;
+}

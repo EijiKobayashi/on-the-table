@@ -6,6 +6,9 @@
   --ruby: #c30048;
   --teeny-bikini: #2f6295;
   --light-cameo-blue: #c5d3e1;
+  --success: #60ac72;
+  --warning: #ffd659;
+  --error: #ef5262;
   --black: #000;
   --white: #fff;
   --gray: #f4f4f4;
@@ -15,12 +18,16 @@
   --primary-color: var(--eiger-nordwand);
   --secondary-color: var(--beyond-the-wall);
   --tertiary-color: var(--ruby);
-  --quaternary-color: var(--black);
+  --quaternary-color: var(--black-color);
   --neutral-color: var(--teeny-bikini);
   --news-bg-color: var(--light-cameo-blue);
-  --success-color: #60ac72;
-  --warning-color: #ffd659;
-  --error-color: #ef5262;
+  --success-color: var(--success);
+  --warning-color: var(--warning);
+  --error-color: var(--error);
+  --black-color: var(--black);
+  --white-color: var(--white);
+  --gray-color: var(--gray);
+  --dark-gray-color: var(--dark-gray);
 
   /* RGB */
   --primary-rgb: 121 154 187;

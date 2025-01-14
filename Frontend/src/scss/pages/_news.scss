@@ -14,7 +14,7 @@ body.news {
 
 .p-news {
   position: relative;
-  color: var(--dark-gray);
+  color: var(--dark-gray-color);
   padding: 60px 0;
 
   @include mq-min(tab) {
@@ -31,7 +31,7 @@ body.news {
     line-height: var(--line-height-heading);
     width: 100px;
     height: 100px;
-    background-color: var(--white);
+    background-color: var(--white-color);
     margin: 0 auto;
     //transform: translateX(-50%);
 
@@ -78,6 +78,8 @@ body.news {
     }
 
     article {
+      color: var(--dark-gray-color);
+      line-height: var(--line-height);
       margin: 56px 0 0;
 
       @include mq-min(tab) {
@@ -112,7 +114,7 @@ body.news {
       hr,
       menu,
       pre {
-        display: block;
+        //display: block;
         unicode-bidi: embed;
       }
 
@@ -176,40 +178,31 @@ body.news {
 
       h1 {
         font-size: 2em;
-        margin: 0.67em 0;
+        margin: 1.88em 0 0.94em;
       }
 
       h2 {
         font-size: 1.5em;
-        margin: 0.75em 0;
+        margin: 2.1em 0 1.05em;
       }
 
       h3 {
         font-size: 1.17em;
-        margin: 0.83em 0;
+        margin: 2.32em 0 1.16em;
       }
 
-      h4,
-      p,
-      blockquote,
-      ul,
-      fieldset,
-      form,
-      ol,
-      dl,
-      dir,
-      menu {
-        margin: 1.12em 0;
+      h4 {
+        margin: 3.14em 0 1.57em;
       }
 
       h5 {
         font-size: 0.83em;
-        margin: 1.5em 0;
+        margin: 4.2em 0 2.1em;
       }
 
       h6 {
         font-size: 0.75em;
-        margin: 1.67em 0;
+        margin: 4.68em 0 2.34em;
       }
 
       h1,
@@ -221,6 +214,24 @@ body.news {
       b,
       strong {
         font-weight: bolder;
+        line-height: var(--line-height-low);
+      }
+
+      p,
+      blockquote,
+      ul,
+      figure,
+      fieldset,
+      form,
+      ol,
+      dl,
+      dir,
+      menu,
+      hr {
+        margin: 1.57em 0;
+      }
+
+      p {
       }
 
       blockquote {
@@ -296,7 +307,15 @@ body.news {
       }
 
       hr {
-        border: 1px inset;
+        width: 100% !important;
+        border: none;
+        border-bottom: 1px solid var(--dark-gray-color);
+
+        &.wp-block-separator {
+          width: 100% !important;
+          border: none;
+          border-bottom: 1px solid var(--dark-gray-color);
+        }
       }
 
       ol,
@@ -305,6 +324,10 @@ body.news {
       menu,
       dd {
         margin-left: 40px;
+      }
+
+      ul {
+        list-style-type: disc;
       }
 
       ol {
@@ -381,6 +404,66 @@ body.news {
         ol,
         dl {
           page-break-before: avoid;
+        }
+      }
+
+      .has-primary-color {
+        color: #799abb;
+      }
+      .has-secondary-color {
+        color: #d8e1eb;
+      }
+      .has-tertiary-color {
+        color: #c30048;
+      }
+      .has-quaternary-color {
+        color: #000;
+      }
+      .has-neutral-color {
+        color: #2f6295;
+      }
+      .has-success-color {
+        color: #60ac72;
+      }
+      .has-warning-color {
+        color: #ffd659;
+      }
+      .has-error-color {
+        color: #ef5262;
+      }
+      .has-black-color {
+        color: #000;
+      }
+      .has-white-color {
+        color: #fff;
+      }
+      .has-gray-color {
+        color: #f4f4f4;
+      }
+      .has-dark-gray-color {
+        color: #282828;
+      }
+
+      .wp-block-embed.wp-block-embed-youtube {
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+
+        .wp-block-embed__wrapper {
+          display: block;
+          position: relative;
+          width: 100%;
+          margin: 0 auto;
+          padding-top: 56.25%;
+
+          iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+          }
         }
       }
     }
@@ -461,7 +544,7 @@ body.news {
           }
 
           &:hover {
-            color: var(--white);
+            color: var(--white-color);
             background-color: var(--neutral-color);
           }
         }

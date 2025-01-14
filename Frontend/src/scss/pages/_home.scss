@@ -79,7 +79,7 @@
   }
 
   .p-home-introduction__lead {
-    color: var(--dark-gray);
+    color: var(--dark-gray-color);
     @include font-size(14);
     line-height: 3.2;
     letter-spacing: 0.3rem;
@@ -104,7 +104,7 @@
     }
 
     p {
-      color: var(--white);
+      color: var(--white-color);
       @include font-size(14);
       text-align: center;
       line-height: var(--line-height-high);
@@ -120,7 +120,7 @@
 
 // News
 .p-home-news {
-  border: 1px solid var(--white);
+  border: 1px solid var(--white-color);
 
   &.c-section {
     padding-top: 0;
@@ -133,7 +133,7 @@
     color: var(--neutral-color);
     width: 100px;
     height: 100px;
-    background-color: var(--white);
+    background-color: var(--white-color);
     margin: 0 auto;
 
     @include mq-min(tab) {
@@ -151,7 +151,7 @@
     max-width: 100%;
     @include font-size(16);
     text-align: center;
-    border: 1px solid var(--white);
+    border: 1px solid var(--white-color);
     border-radius: 6px;
     margin: 56px auto 0;
     padding: 16px 24px;
@@ -165,7 +165,7 @@
 
     &:hover {
       color: var(--neutral-color);
-      background-color: var(--white);
+      background-color: var(--white-color);
     }
   }
 }
@@ -180,7 +180,7 @@
   }
 
   .p-home-menu__list {
-    color: var(--dark-gray);
+    color: var(--dark-gray-color);
     margin-top: 60px;
 
     @include mq-min(tab) {
@@ -191,7 +191,7 @@
       display: flex;
       flex-direction: column;
       gap: 32px;
-      background-color: var(--white);
+      background-color: var(--white-color);
       margin: 32px 0 0;
       padding: 40px 20px;
 
@@ -364,7 +364,7 @@
 
       .ja-JP {
         display: block;
-        color: var(--black);
+        color: var(--black-color);
         @include font-size(20);
 
         @include mq-min(tab) {
@@ -388,7 +388,7 @@
   }
 
   .p-home-chef__text {
-    color: var(--dark-gray);
+    color: var(--dark-gray-color);
     @include font-size(14);
     line-height: var(--line-height-list);
     margin-top: 40px;
@@ -435,7 +435,7 @@
   }
 
   .p-home-our-statement__text {
-    color: var(--dark-gray);
+    color: var(--dark-gray-color);
     @include font-size(14);
     text-align: center;
     line-height: var(--line-height-high);
@@ -521,7 +521,7 @@
 
   .p-home-restaurant__table {
     line-height: var(--line-height-list);
-    border-top: 1px solid var(--white);
+    border-top: 1px solid var(--white-color);
     margin-top: 64px;
 
     @include mq-min(tab) {
@@ -540,7 +540,7 @@
 
         @include mq-min(md) {
           @include font-size(16);
-          border-bottom: 1px solid var(--white);
+          border-bottom: 1px solid var(--white-color);
           vertical-align: middle;
         }
       }
@@ -560,11 +560,11 @@
       }
 
       td {
-        color: var(--dark-gray);
+        color: var(--dark-gray-color);
 
         @include mq-max(md) {
           display: block;
-          border-bottom: 1px solid var(--white);
+          border-bottom: 1px solid var(--white-color);
           padding: 0 0 32px;
         }
 
@@ -619,7 +619,7 @@
 .p-home-inquiry {
   display: flex;
   flex-direction: column;
-  background-color: var(--dark-gray);
+  background-color: var(--dark-gray-color);
 
   @include mq-min(tab) {
   }
@@ -637,7 +637,7 @@
     place-items: center;
     justify-items: center;
     align-items: center;
-    border-top: 1px solid var(--white);
+    border-top: 1px solid var(--white-color);
     padding: 30px 0;
 
     @include mq-min(tab) {
@@ -669,8 +669,8 @@
         align-content: center;
         width: 180px;
         height: 180px;
-        background-color: var(--black);
-        border: 1px solid var(--white);
+        background-color: var(--black-color);
+        border: 1px solid var(--white-color);
         margin: 0 auto;
         padding: 0;
         @include transition();
@@ -744,9 +744,18 @@
 
     &:nth-of-type(4) {
       @include font-size(14);
+      text-align: center;
 
       @include mq-min(tab) {
         @include font-size(24);
+      }
+
+      dd > a {
+        @include transition();
+
+        &:hover {
+          opacity: var(--opacity);
+        }
       }
 
       .icon-instagram {

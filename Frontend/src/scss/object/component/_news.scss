@@ -2,7 +2,7 @@
 @use '../../global' as *;
 
 .c-news {
-  border: 1px solid var(--white);
+  border: 1px solid var(--white-color);
 
   .news & {
     border: none;
@@ -29,7 +29,7 @@
     color: var(--neutral-color);
     width: 100px;
     height: 100px;
-    background-color: var(--white);
+    background-color: var(--white-color);
     margin: 0 auto;
 
     @include mq-min(tab) {

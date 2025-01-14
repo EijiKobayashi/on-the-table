@@ -23,7 +23,7 @@
     left: 50%;
     width: 30px;
     height: 1px;
-    background-color: var(--white);
+    background-color: var(--white-color);
     margin: 0 auto;
     @include transition(all, 0.35s, ease);
     transform: translateX(-50%);
@@ -62,7 +62,7 @@
       background-color: var(--neutral-color);
 
       @include mq-min(tab) {
-        background-color: var(--white);
+        background-color: var(--white-color);
       }
 
       &:nth-of-type(1) {

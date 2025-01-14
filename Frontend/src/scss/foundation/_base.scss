@@ -9,14 +9,14 @@ html {
 }
 
 body {
-  color: var(--white);
+  color: var(--white-color);
   font-family: var(--font-serif);
   letter-spacing: var(--letter-spacing);
 
   ::selection,
   ::-moz-selection {
-    color: var(--black);
-    background: var(--white);
+    color: var(--black-color);
+    background: var(--white-color);
   }
 
   &.is-open-menu {
