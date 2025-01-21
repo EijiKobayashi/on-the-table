@@ -2,19 +2,19 @@
   <h2 class="c-heading" style=""><span>Menu</span></h2>
   <div class="p-home-menu__list">
     <div class="p-home-menu__item">
-      <h3 class="--name"><span>おまかせコース（6品）</span></h3>
+      <h3 class="--name"><span>おまかせコース<br class="u-sp-only">（6品）</span></h3>
       <p class="--summary">前菜とメインのお料理の<br>カジュアルなコースです</p>
       <span class="--price"><em>6,600</em>円</span>
       <!--  / .p-home-menu__item /  -->
     </div>
     <div class="p-home-menu__item">
-      <h3 class="--name"><span>フカヒレ醤油煮込入り<br>おまかせコース（7品）</span></h3>
+      <h3 class="--name"><span>フカヒレ醤油煮込入り<br>おまかせコース<br class="u-sp-only">（7品）</span></h3>
       <p class="--summary">前菜からデザートまで<br>お楽しみいただけるコースです</p>
       <span class="--price"><em>13,750</em>円</span>
       <!--  / .p-home-menu__item /  -->
     </div>
     <div class="p-home-menu__item">
-      <h3 class="--name"><span>フカヒレ食べ比べ入り<br>おまかせコース（８品）</span></h3>
+      <h3 class="--name"><span>フカヒレ食べ比べ入り<br>おまかせコース<br class="u-sp-only">（８品）</span></h3>
       <p class="--summary">前菜からデザートまで<br>お楽しみいただけるコースです</p>
       <span class="--price"><em>22,000</em>円</span>
       <!--  / .p-home-menu__item /  -->

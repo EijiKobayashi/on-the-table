@@ -64,9 +64,9 @@
       }
 
       &:has(> *) {
-        background-image: url(/assets/images/common/illust_bg_sp.svg);
-        background-position: center -80px;
-        background-repeat: repeat-y;
+        background-image: url(/assets/images/common/illust_bg_sp_2.svg);
+        background-position: 0 center;
+        background-repeat: no-repeat;
         background-size: 320px auto;
         margin: 80px 0 0;
 
@@ -390,6 +390,8 @@
   .p-home-chef__text {
     color: var(--dark-gray-color);
     @include font-size(14);
+    text-align: justify;
+    text-justify: inter-ideograph;
     line-height: var(--line-height-list);
     margin-top: 40px;
 

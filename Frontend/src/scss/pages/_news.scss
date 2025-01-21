@@ -489,9 +489,13 @@ body.news {
 
       .--prev,
       .--next {
-        flex: 0 0 50px;
+        flex: 0 0 24px;
         text-align: center;
         line-height: var(--line-height-heading);
+
+        @include mq-min(tab) {
+          flex: 0 0 50px;
+        }
 
         & > a {
           display: block;
