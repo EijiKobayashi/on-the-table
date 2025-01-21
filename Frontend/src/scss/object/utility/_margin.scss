@@ -1,0 +1,117 @@
+// Margin
+@use '../../global' as *;
+
+// margin
+@for $i from 0 through 65 {
+  .u-mt#{$i * 8} {
+    margin-top: #{$i * 8}px !important;
+  }
+}
+
+@for $i from 0 through 65 {
+  .u-mb#{$i * 8} {
+    margin-bottom: #{$i * 8}px !important;
+  }
+}
+
+@for $i from 0 through 65 {
+  .u-ml#{$i * 8} {
+    margin-left: #{$i * 8}px !important;
+  }
+}
+
+@for $i from 0 through 65 {
+  .u-mr#{$i * 8} {
+    margin-right: #{$i * 8}px !important;
+  }
+}
+
+// padding
+@for $i from 0 through 65 {
+  .u-pt#{$i * 8} {
+    padding-top: #{$i * 8}px !important;
+  }
+}
+
+@for $i from 0 through 65 {
+  .u-pb#{$i * 8} {
+    padding-bottom: #{$i * 8}px !important;
+  }
+}
+
+@for $i from 0 through 65 {
+  .u-pl#{$i * 8} {
+    padding-left: #{$i * 8}px !important;
+  }
+}
+
+@for $i from 0 through 65 {
+  .u-pr#{$i * 8} {
+    padding-right: #{$i * 8}px !important;
+  }
+}
+
+// Flexible Spacer
+@for $i from 0 through 65 {
+  .u-sp-mt#{$i * 8} {
+    @include mq-max(md) {
+      margin-top: #{$i * 8}px !important;
+    }
+  }
+}
+
+@for $i from 0 through 65 {
+  .u-sp-mb#{$i * 8} {
+    @include mq-max(md) {
+      margin-bottom: #{$i * 8}px !important;
+    }
+  }
+}
+
+@for $i from 0 through 65 {
+  .u-pc-mt#{$i * 8} {
+    @include mq-min(md) {
+      margin-top: #{$i * 8}px !important;
+    }
+  }
+}
+
+@for $i from 0 through 65 {
+  .u-pc-mb#{$i * 8} {
+    @include mq-min(md) {
+      margin-bottom: #{$i * 8}px !important;
+    }
+  }
+}
+
+@for $i from 0 through 65 {
+  .u-sp-pt#{$i * 8} {
+    @include mq-max(md) {
+      padding-top: #{$i * 8}px;
+    }
+  }
+}
+
+@for $i from 0 through 65 {
+  .u-sp-pb#{$i * 8} {
+    @include mq-max(md) {
+      padding-bottom: #{$i * 8}px;
+    }
+  }
+}
+
+@for $i from 0 through 65 {
+  .u-pc-pt#{$i * 8} {
+    @include mq-min(md) {
+      padding-top: #{$i * 8}px;
+    }
+  }
+}
+
+@for $i from 0 through 65 {
+  .u-pc-pb#{$i * 8} {
+    @include mq-min(md) {
+      padding-bottom: #{$i * 8}px;
+    }
+  }
+}

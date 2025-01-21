@@ -1,0 +1,100 @@
+// root
+:root {
+  /* Colors */
+  --eiger-nordwand: #799abb;
+  --beyond-the-wall: #d8e1eb;
+  --ruby: #c30048;
+  --teeny-bikini: #2f6295;
+  --light-cameo-blue: #c5d3e1;
+  --success: #60ac72;
+  --warning: #ffd659;
+  --error: #ef5262;
+  --black: #000;
+  --white: #fff;
+  --gray: #f4f4f4;
+  --dark-gray: #282828;
+
+  /* Style Guide */
+  --primary-color: var(--eiger-nordwand);
+  --secondary-color: var(--beyond-the-wall);
+  --tertiary-color: var(--ruby);
+  --quaternary-color: var(--black-color);
+  --neutral-color: var(--teeny-bikini);
+  --news-bg-color: var(--light-cameo-blue);
+  --success-color: var(--success);
+  --warning-color: var(--warning);
+  --error-color: var(--error);
+  --black-color: var(--black);
+  --white-color: var(--white);
+  --gray-color: var(--gray);
+  --dark-gray-color: var(--dark-gray);
+
+  /* RGB */
+  --primary-rgb: 121 154 187;
+  --secondary-rgb: 216 225 235;
+  --tertiary-rgb: 195 0 72;
+  --quaternary-rgb: 0 0 0;
+  --neutral-rgb: 47 98 149;
+  --success-rgb: 96 172 114;
+  --warning-rgb: 255 214 89;
+  --error-rgb: 239 82 98;
+  --black-rgb: 0 0 0;
+  --white-rgb: 255 255 255;
+  --gray-rgb: 244 244 244;
+  --dark-gray-rgb: 40 40 40;
+
+  /* font-family */
+  --font-sans-serif: 'Noto Sans JP', serif;
+  --font-serif: 'Noto Serif JP', serif;
+  --font-roman: 'Noto Sans JP', serif;
+
+  /* Width */
+  --width: 100%;
+  --max-width: 1000px;
+
+  /* Height */
+  --header-height-sp: 100px;
+  --header-height-pc: 200px;
+  --header-logo-height-sp: 58px;
+  --header-logo-height-md: 80px;
+
+  /* Line Height */
+  --line-height: 2.8;
+  --line-height-heading: 1;
+  --line-height-list: 1.8;
+  --line-height-low: 1.4;
+  --line-height-high: 4.2;
+
+  /* Letter Spacing */
+  --letter-spacing: 0.1em;
+
+  /* Opacity */
+  --opacity: 0.6;
+}
+
+// Break points
+// min-width
+$breakpoint-up: (
+  'xs': 'screen and (min-width: 320px)',
+  's': 'screen and (min-width: 375px)',
+  'sm': 'screen and (min-width: 425px)',
+  'md': 'screen and (min-width: 768px)',
+  'lg': 'screen and (min-width: 960px)',
+  'tab': 'screen and (min-width: 1024px)',
+  'xl': 'screen and (min-width: 1280px)',
+  'pc-md': 'screen and (min-width: 1440px)',
+  'pc-lg': 'screen and (min-width: 1920px)'
+) !default;
+
+// max-width
+$breakpoint-down: (
+  'xs': 'screen and (max-width: 319px)',
+  's': 'screen and (max-width: 374px)',
+  'sm': 'screen and (max-width: 424px)',
+  'md': 'screen and (max-width: 767px)',
+  'lg': 'screen and (max-width: 959px)',
+  'tab': 'screen and (max-width: 1023px)',
+  'xl': 'screen and (max-width: 1279px)',
+  'pc-md': 'screen and (max-width: 1439px)',
+  'pc-lg': 'screen and (max-width: 1919px)'
+) !default;

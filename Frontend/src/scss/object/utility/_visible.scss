@@ -1,0 +1,61 @@
+// Visible
+@use '../../global' as *;
+
+@include mq-max(md) {
+  .u-sp-none,
+  .is-sp-none {
+    display: none;
+  }
+}
+
+@include mq-min(md) {
+  .u-pc-none,
+  .is-pc-none {
+    display: none;
+  }
+}
+
+.u-pc,
+.u-pc-only,
+.is-pc-only {
+  display: block;
+}
+
+@include mq-max(md) {
+  .u-pc,
+  .u-pc-only,
+  .is-pc-only {
+    display: none;
+  }
+}
+
+.u-sp,
+.u-sp-only,
+.is-sp-only {
+  display: none;
+}
+
+@include mq-max(md) {
+  .u-sp,
+  .u-sp-only,
+  .is-sp-only {
+    display: block;
+  }
+}
+
+.is-tab-only {
+  display: none;
+}
+
+@media (min-width: 768px) and (max-width: 1207px) {
+  .is-tab-only {
+    display: block;
+  }
+}
+
+.u-disabled,
+.is-disabled {
+  color: rgba(112, 112, 112, 0.5) !important;
+  filter: grayscale(100%);
+  pointer-events: none;
+}

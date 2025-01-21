@@ -1,0 +1,49 @@
+// Heading
+@use '../../global' as *;
+
+.c-heading {
+}
+
+h2.c-heading {
+  --heading-underline-width: 10px;
+  --heading-underline-color: var(--white-color);
+  --heading-underline-gap: -14px;
+
+  position: relative;
+  @include font-size(20);
+  line-height: var(--line-height-heading);
+
+  @include mq-min(tab) {
+    @include font-size(26);
+    letter-spacing: 0.2rem;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: var(--heading-underline-gap);
+    left: calc(var(--heading-underline-width) * -1);
+    width: var(--heading-underline-width);
+    height: 1px;
+    background-color: var(--heading-underline-color);
+  }
+
+  span {
+    position: relative;
+    display: inline-block;
+
+    &:after {
+      content: '';
+      display: inline;
+      position: absolute;
+      bottom: var(--heading-underline-gap);
+      left: 0;
+      height: 1px;
+      background-color: var(--heading-underline-color);
+    }
+
+    &:after {
+      width: 100%;
+    }
+  }
+}

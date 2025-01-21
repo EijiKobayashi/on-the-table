@@ -1,0 +1,29 @@
+// Width
+@use '../../global' as *;
+
+.full-width,
+.u-full-width,
+.u-full-wrapper {
+  position: relative !important;
+  width: 100vw !important;
+  margin-left: calc(-50vw + 50%) !important;
+  margin-right: calc(-50vw + 50%) !important;
+}
+
+.u-max-width {
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.u-width-100 {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@for $i from 0 through 20 {
+  .u-w#{$i * 10} {
+    width: #{$i * 10}px !important;
+  }
+}

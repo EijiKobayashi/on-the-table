@@ -1,0 +1,13 @@
+// Section
+@use '../../global' as *;
+
+.c-section {
+  position: relative;
+  margin: 100px 10% 0;
+  padding: 100px 10%;
+
+  @include mq-min(tab) {
+    margin: 160px 10% 0;
+    padding: 160px 10%;
+  }
+}

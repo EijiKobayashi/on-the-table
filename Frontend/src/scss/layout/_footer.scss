@@ -1,0 +1,50 @@
+// Footer
+@use '../global' as *;
+
+.l-footer {
+  background-color: var(--primary-color);
+
+  @include mq-min(tab) {
+  }
+
+  @include mq-min(tab) {
+    .is-open-menu & {
+      filter: blur(2px);
+    }
+  }
+
+  .l-footer__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 80px 5%;
+
+    @include mq-min(md) {
+    }
+
+    @include mq-min(tab) {
+      padding: 160px 0;
+    }
+  }
+
+  .l-footer__logo {
+    width: 140px;
+    height: auto;
+
+    @include mq-min(tab) {
+      width: 220px;
+    }
+  }
+
+  .l-footer__copyright {
+    @include font-size(12);
+
+    @include mq-min(tab) {
+      @include font-size(14);
+    }
+  }
+}
